@@ -55,9 +55,10 @@
 		 	}else{
 
 		 		$images = $_FILES['images']['name'];
+		 		$kode_user = $this->session->kode_user;
 
 				$data = [
-
+					'kode_user' => $kode_user,
 					'title' => $this->input->post('title'),
 					'images' => $images,
 					'link_button' => $this->input->post('link_button'),
@@ -102,9 +103,9 @@
 		 	}else{
 
 
-				
+				$kode_user = $this->session->kode_user;
 				$data = [
-
+					'kode_user' => $kode_user,
 					'title_product' => $this->input->post('title_product'),
 					'harga_awal' => $this->input->post('harga_awal'),
 					'harga_diskon' => $this->input->post('harga_diskon'),
@@ -167,14 +168,15 @@
 		 	}else{
 
 
+
+				$kode_user = $this->session->kode_user;
 				
 				$data = [
-
+					'kode_user' => $kode_user,
 					'title_product' => $this->input->post('title_product'),
 					'harga_awal' => $this->input->post('harga_awal'),
 					'harga_diskon' => $this->input->post('harga_diskon'),
 					'images' => $images = $_FILES['images']['name'],
-
 				];
 
 				$this->db->where('id',$id);
@@ -233,7 +235,7 @@
 		 		$images = $_FILES['images']['name'];
 
 				$data = [
-
+					'kode_user' => $this->session->kode_user,
 					'title' => $this->input->post('title'),
 					'images' => $images,
 					'link_button' => $this->input->post('link_button'),
@@ -250,6 +252,67 @@
 
 		}
 
+	}
+
+
+	function edit_section2(){
+
+			$gambar = $this->input->post('images');
+
+			echo $this->input->post('title');
+
+			if ($gambar == null) {
+
+				$id = $this->input->post('id');
+				
+				$data = [
+					'title' => $this->input->post('title'),
+					'link_button' => $this->input->post('link_button'),
+					'color' => $this->input->post('color'),
+					'title_button' => $this->input->post('title_button'),
+				];
+
+				$this->db->where('id', $id);
+				$this->db->update('tbl_section2', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+		 		redirect('admin/section2');
+
+
+			}else{
+
+
+			$config['upload_path']          = './upload/';
+			$config['allowed_types']        = 'jpg|png|jpeg';
+			
+
+			$this->load->library('upload', $config);
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('images')){
+				$error = array('error' => $this->upload->display_errors());
+				$this->session->set_flashdata('message', 'swal("Gagal!", "Upload gambar gagal", "warning" );');
+		 		redirect('admin/section3');
+
+		 	}else{
+
+		 		$images = $_FILES['images']['name'];
+
+				$data = [
+					'title' => $this->input->post('title'),
+					'images'=> $_FILES['images']['name'],
+					'link_button' => $this->input->post('link_button'),
+					'color' => $this->input->post('color'),
+					'title_button' => $this->input->post('title_button'),
+				];
+
+				$this->db->where('id', $id);
+				$this->db->update('tbl_section2', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+		 		redirect('admin/section2');
+
+		 	}
+
+
+			}
 	}
 
 
@@ -285,7 +348,7 @@
 		 		$images = $_FILES['images']['name'];
 
 				$data = [
-
+					'kode_user' => $this->session->kode_user,
 					'title' => $this->input->post('title'),
 					'images' => $images,
 
@@ -335,6 +398,7 @@
 
 				$data = [
 
+					'kode_user' => $this->session->kode_user,
 					'title' => $this->input->post('title'),
 					'images' => $images,
 					'link_button' => $this->input->post('link_button'),
@@ -365,9 +429,12 @@ function admin(){
 	$kirim = $this->input->post('kirim');
 
 	if ($kirim) {
+
+		$kode = rand(1, 100000);
+		$kode_user = "user-".$kode;
 		
 		$data = [
-
+			'kode_user' => $kode_user,
 			'username' => $this->input->post('username'),
 			'pass' => password_hash($this->input->post('pass'), PASSWORD_DEFAULT),
 			'rule'  => $this->input->post('rule'),

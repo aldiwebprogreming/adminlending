@@ -35,6 +35,7 @@
 					$data = [
 						'username' => $cekuser['username'],
 				 		'rule' => $cekuser['rule'],
+				 		'kode_user' => $cekuser['kode_user'],
 				 	];
 
 					$this->session->set_userdata($data);

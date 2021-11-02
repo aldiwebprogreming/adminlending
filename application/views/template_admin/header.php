@@ -121,6 +121,13 @@
                   <p>Halaman Utama</p>
                 </a>
            </li>
+
+            <li class="nav-item">
+                <a href="<?= base_url('admin/produk') ?>" class="nav-link">
+                  <i class="fas fa-cart-arrow-down nav-icon"></i>
+                  <p>Produk</p>
+                </a>
+           </li>
            <li class="nav-item">
                 <a href="<?= base_url('admin/section2') ?>" class="nav-link">
                   <i class="fas fa-pen-square nav-icon"></i>
@@ -140,12 +147,23 @@
                 </a>
            </li>
 
+
+           <?php 
+
+              if ($this->session->rule == 'Admin') {
+              
+              }else{
+
+            ?>
+
            <li class="nav-item">
                 <a href="<?= base_url('admin/admin') ?>" class="nav-link">
                   <i class="fas fa-user nav-icon"></i>
                   <p>Admin</p>
                 </a>
            </li>
+
+           <?php } ?>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

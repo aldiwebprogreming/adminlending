@@ -28,7 +28,9 @@
                         <form method="post" action="<?= base_url('admin/act_utama') ?>" enctype="multipart/form-data">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <textarea class="form-control" name="title"></textarea>
+                            <textarea class="textarea" placeholder="Place some text here" name="title"
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">Images</label>
