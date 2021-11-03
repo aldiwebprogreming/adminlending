@@ -1,7 +1,3 @@
-<?php 
-  session_start();
-  
- ?>
 
 <!doctype html>
 <html lang="en">
@@ -21,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/media.css">
 
-  <link rel="stylesheet" href="<?= base_url('lending/') ?>assets/app.css">
+  <link rel="stylesheet" href="<?= base_url('lending_assets/') ?>assets/app.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>BJMS</title>
   <!-- Facebook Pixel Code -->
@@ -65,7 +61,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
     <nav class="hero-nav container px-4 px-lg-0 mx-auto">
       <ul class="nav w-100 list-unstyled align-items-center p-0">
         <li class="hero-nav__item">
-          <img class="hero-nav__logo" src="assets/logo/logo2.png">
+          <img class="hero-nav__logo" src="<?= base_url('lending_assets/') ?>assets/logo/logo2.png">
         </li>
         <li id="hero-menu" class="flex-grow-1 hero__nav-list hero__nav-list--mobile-menu ft-menu">
           <ul class="hero__menu-content nav flex-column flex-lg-row ft-menu__slider animated list-unstyled p-2 p-lg-0">
@@ -141,7 +137,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
         </div>
         <div class="col-lg-5 mt-5 mt-lg-0 mx-0">
           <div class="hero__img-container">
-            <img src="assets/produk/navbar4.png" class="hero__img w-100">
+            <img src="<?= base_url('lending_assets/') ?>assets/produk/navbar4.png" class="hero__img w-100">
           </div>
         </div>
       </div>
@@ -247,7 +243,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <h2><strong>GET 10% OFF <br>FOR MIN. <br>ORDER 10 PCS</strong></h2>
           <a href="https://www.tokopedia.com/wikagaugedanvtvvalvemdn/etalase/wika" target="_blank" class="btn btn-primary" style="background-color: white; color:black;">SHOP NOW</a>
       </div>
-      <img class="card-img-top" src="assets/produk/poster-baru3.png" alt="Card image cap">
+      <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/poster-baru3.png" alt="Card image cap">
       
     </div>
   </div>
@@ -259,7 +255,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <a href="https://www.tokopedia.com/wikagaugedanvtvvalvemdn" target="_blank" class="btn btn-primary" style="background-color: white; color:black;">SHOP NOW</a>
        </div>
 
-      <img class="card-img-top" src="assets/produk/poster-baru2.png" alt="Card image cap">
+      <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/poster-baru2.png" alt="Card image cap">
     </div>
   </div>
 </div>
@@ -300,7 +296,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
             <div class="col-sm-3 mt-3 col-6">
               <div class="row">
                 <div class="col-sm-6">
-                  <img src="assets/produk/dollar.png" class="img-fluid" alt="Responsive image">
+                  <img src="<?= base_url('lending_assets/') ?>assets/produk/dollar.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-6">
                  <h6 class="text-center mt-2"><strong>LOW PRICES GUARENTEED</strong></h6>
@@ -311,7 +307,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
             <div class="col-sm-3 mt-3 col-6">
               <div class="row">
                 <div class="col-sm-6">
-                  <img src="assets/produk/jam.png" class="img-fluid" alt="Responsive image">
+                  <img src="<?= base_url('lending_assets/') ?>assets/produk/jam.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-6">
                  <h6 class="text-center mt-2"><strong>AVAILABLE TO YOU 24/7</strong></h6>
@@ -322,7 +318,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
             <div class="col-sm-3 mt-3 col-6">
               <div class="row">
                 <div class="col-sm-6">
-                  <img src="assets/produk/settings.png" class="img-fluid" alt="Responsive image">
+                  <img src="<?= base_url('lending_assets/') ?>assets/produk/settings.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-6">
                  <h6 class="text-center mt-2"> <strong>AFTER SALES SERVICES</strong></h6>
@@ -332,7 +328,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
             </div><div class="col-sm-3 mt-3 col-6">
               <div class="row">
                 <div class="col-sm-6">
-                  <img src="assets/produk/set.png" class="img-fluid" alt="Responsive image">
+                  <img src="<?= base_url('lending_assets/') ?>assets/produk/set.png" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-6">
                  <h6 class="text-center mt-2"><strong>QUALITY CONTROL</strong></h6>
@@ -367,7 +363,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card">
             <div class="img-hover-zoom">
                <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-              <img class="card-img-top" src="assets/produk/1.png" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/1.png" alt="Card image cap">
             </div>
             <div class="card-body shadow">
               <h5 class="card-title text-center"><strong>WIKA PRESSURE GAUGE 232.50.100</strong></h5>
@@ -381,7 +377,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card shadow">
             <div class="img-hover-zoom">
                 <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-               <img class="card-img-top" src="assets/produk/seller02.png" alt="Card image cap">
+               <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/seller02.png" alt="Card image cap">
             </div>
             <div class="card-body">
               <h6 class="card-title text-center"><strong>VTV Globe Valve Cast Iron PN16 - Size 4 Inch</strong></h6>
@@ -397,7 +393,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
 
             <div class="img-hover-zoom">
                 <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-              <img class="card-img-top" src="assets/produk/seller03.png" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/seller03.png" alt="Card image cap">
             </div>
             <div class="card-body">
               <h6 class="card-title text-center"><strong>VTV 2PC Body Ball Valve JIS 10K Cast Steel - 3 Inch</strong></h6>
@@ -411,7 +407,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card shadow">
              <div class="img-hover-zoom">
                 <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-              <img class="card-img-top" src="assets/produk/4.png" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/4.png" alt="Card image cap">
             </div>
             <div class="card-body">
               <h6 class="card-title text-center"><strong>TEMPERATURE GAUGE A52  & R52</strong></h6>
@@ -425,7 +421,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card shadow">
              <div class="img-hover-zoom">
                <!--  <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-               <img class="card-img-top" src="assets/produk/5.png" alt="Card image cap">
+               <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/5.png" alt="Card image cap">
              </div>
             <div class="card-body">
               <h6 class="card-title text-center"><strong>VTV 3PC Body Ball Valve Screw End SS316 - 1/2 Inch</strong></h6>
@@ -458,7 +454,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card">
              <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
             <div class="img-hover-zoom">
-             <img class="card-img-top" src="assets/produk/onsale01.png" alt="Card image cap">
+             <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/onsale01.png" alt="Card image cap">
            </div>
             <div class="card-body">
               <h5 class="card-title text-center"><strong>WIKA PRESSURE GAUGE 232.50.100</strong></h5>
@@ -472,7 +468,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card">
             <div class="img-hover-zoom">
               <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-              <img class="card-img-top" src="assets/produk/onsale02.png" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/onsale02.png" alt="Card image cap">
             </div>
             <div class="card-body">
               <h5 class="card-title text-center"><strong>WIKA TEMPERATURE GAUGE A52 - 4 INCH</strong></h5>
@@ -486,7 +482,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="card">
             <div class="img-hover-zoom">
               <!-- <div class="sale" style="height: 30px; background-color: red; position: absolute; margin-right: 50px;width: 70px; text-align: center; color:white;"><label><strong>SALE 0%</strong></label></div> -->
-              <img class="card-img-top" src="assets/produk/onsale03.png" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/onsale03.png" alt="Card image cap">
            </div>
             <div class="card-body">
               <h5 class="card-title text-center"><strong>WIKA TEMPERATURE GAUGE R52 - 4 INCH</strong></h5>
@@ -719,7 +715,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
   <!-- =================================== -->
 
 <div class="card bg-dark text-white mb-5" id="hero">
-  <img class="card-img" src="assets/produk/bener-bawah3.png" alt="Card image">
+  <img class="card-img" src="<?= base_url('lending_assets/') ?>assets/produk/bener-bawah3.png" alt="Card image">
   <div class="card-img-overlay float-sm-right" id="bg-al" style="background-color: rgba(0, 0, 0, 0.5);">
     <div  id="card3">
      <!--  <div class="bulat rounded-circle" style="height: 200px; width: 200px; background-color: white; border-radius: 100px; position: absolute; margin-left: 500px;"><h1 style="margin-top: 30px; text-align:center; color: red; font-size: 60px;"><strong>Disc<br>10 %</strong></h1></div> -->
@@ -766,7 +762,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
     <div class="container">
       <div class="row px-0 mx-0 justify-content-center align-items-center">
         <div class="block-44__logo-container">
-          <img class="block-44__logo" src="assets/produk/logo3.png">
+          <img class="block-44__logo" src="<?= base_url('lending_assets/') ?>assets/produk/logo3.png">
         </div>
             <form class="form-inline" method="post" action="aksi.php">
               <div class="form-group mx-sm-3 mb-2" style="display:none">
@@ -863,7 +859,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
 
   <!-- =================================== -->
 
-  <script src="<?= base_url('lending/') ?>assets/app.js"></script>
+  <script src="<?= base_url('lending_assets/') ?>assets/app.js"></script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
