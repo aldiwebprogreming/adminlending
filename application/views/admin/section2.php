@@ -28,8 +28,7 @@
                         <form method="post" action="<?= base_url('admin/act_section2') ?>" enctype="multipart/form-data">
                           <div class="form-group">
                             <label for="exampleInputEmail1">Title</label>
-                            <textarea class="textarea" placeholder="Place some text here"
-                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="title" placeholder="Place some text here"></textarea>
                           </div>
                           <div class="form-group">
                             <label for="exampleInputPassword1">Images</label>
@@ -113,13 +112,13 @@
                                 Detail
                               </button>
 
-                             <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModaledit"> Edit
+                             <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModaledit<?= $data['id'] ?>"> Edit
                             </button>
 
 
                          <!--    Modal edit -->
 
-                             <div class="modal fade" id="exampleModaledit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                             <div class="modal fade" id="exampleModaledit<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">

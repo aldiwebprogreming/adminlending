@@ -254,65 +254,75 @@
 
 	}
 
+	function editsection2(){
+			$id = $this->input->get('id');
+			$data['section2'] = $this->db->get_where('tbl_section2',['id' => $id])->row_array();
+			$this->load->view('template_admin/header');
+			$this->load->view('admin/editsection2', $data);
+			$this->load->view('template_admin/footer');
+	}
+
 
 	function edit_section2(){
 
-			$gambar = $this->input->post('images');
+		$id = $this->input->post('id');
 
-			echo $this->input->post('title');
+		$edit = $this->input->post('edit');
 
-			if ($gambar == null) {
+		if ($edit) {
+			
+			$data = [
 
-				$id = $this->input->post('id');
-				
-				$data = [
-					'title' => $this->input->post('title'),
-					'link_button' => $this->input->post('link_button'),
-					'color' => $this->input->post('color'),
-					'title_button' => $this->input->post('title_button'),
-				];
+				'title' => $this->input->post('title'),
+				// 'images' => $images,
+				'link_button' => $this->input->post('link_button'),
+				'color' => $this->input->post('color'),
+				'title_button' => $this->input->post('title_button'),
+			];
 
-				$this->db->where('id', $id);
-				$this->db->update('tbl_section2', $data);
-				$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
-		 		redirect('admin/section2');
-
-
-			}else{
+			$this->db->where('id', $id);
+			$this->db->update('tbl_section2', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+		 	redirect('admin/section2');
 
 
-			$config['upload_path']          = './upload/';
-			$config['allowed_types']        = 'jpg|png|jpeg';
+		}
+
+			// $config['upload_path']          = './upload/';
+			// $config['allowed_types']        = 'jpg|png|jpeg';
 			
 
-			$this->load->library('upload', $config);
-			$this->load->library('upload', $config);
-			if (!$this->upload->do_upload('images')){
-				$error = array('error' => $this->upload->display_errors());
-				$this->session->set_flashdata('message', 'swal("Gagal!", "Upload gambar gagal", "warning" );');
-		 		redirect('admin/section3');
+			// $this->load->library('upload', $config);
+			// if (!$this->upload->do_upload('images')){
+			// 	$error = array('error' => $this->upload->display_errors());
+			// 	$this->session->set_flashdata('message', 'swal("Gagal!", "Upload gambar gagal", "warning" );');
+		 // 		redirect('admin/section2');
 
-		 	}else{
-
-		 		$images = $_FILES['images']['name'];
-
-				$data = [
-					'title' => $this->input->post('title'),
-					'images'=> $_FILES['images']['name'],
-					'link_button' => $this->input->post('link_button'),
-					'color' => $this->input->post('color'),
-					'title_button' => $this->input->post('title_button'),
-				];
-
-				$this->db->where('id', $id);
-				$this->db->update('tbl_section2', $data);
-				$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
-		 		redirect('admin/section2');
-
-		 	}
+		 // 	}else{
 
 
-			}
+
+			// 	$id = $this->input->post('id');
+			// 	$images = $_FILES['images']['name'];
+				
+			// 	$data = [
+			// 		'title' => $this->input->post('title'),
+			// 		'images' => $images,
+			// 		'link_button' => $this->input->post('link_button'),
+			// 		'color' => $this->input->post('color'),
+			// 		'title_button' => $this->input->post('title_button'),
+			// 	];
+
+			// 	$this->db->where('id', $id);
+			// 	$this->db->update('tbl_section2', $data);
+			// 	$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+		 // 		redirect('admin/section2');
+
+		 // 	}
+
+
+			
+
 	}
 
 
