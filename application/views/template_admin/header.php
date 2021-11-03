@@ -27,6 +27,8 @@
   <link rel="stylesheet" href=" <?= base_url('assets/') ?>plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans <?= base_url('assets/') ?> Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+   <link rel="stylesheet" href="<?= base_url('assets/')  ?>calender/style.css">
+  <link rel="stylesheet" href="<?= base_url('assets/')  ?>calender/theme.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -108,7 +110,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+            <a href="<?= base_url('admin/') ?>" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard

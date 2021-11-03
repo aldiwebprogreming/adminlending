@@ -50,9 +50,28 @@
 <script src="<?= base_url('assets/') ?>dist/js/demo.js"></script>
 <script src="<?= base_url('assets/') ?>plugins/datatables/jquery.dataTables.js"></script>
 <script src="<?= base_url('assets/') ?>plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="<?= base_url('assets/') ?>/alert.js"></script>
+<script src="<?= base_url('assets/') ?>calender/calendar.js"></script>
  <?php echo "<script>".$this->session->flashdata('message')."</script>"?>
+
+
+ <script>
+  function selectDate(date) {
+  $('.calendar-wrapper').updateCalendarOptions({
+    date: date
+  });
+}
+
+var defaultConfig = {
+  weekDayLength: 1,
+  date: new Date(),
+  onClickDate: selectDate,
+  showYearDropdown: true,
+};
+
+$('.calendar-wrapper').calendar(defaultConfig);
+</script>
 
 <script>
   $(function () {

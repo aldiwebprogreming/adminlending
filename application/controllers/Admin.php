@@ -17,8 +17,11 @@
 
 		function index(){
 
+			$data['produk'] = $this->db->get('tbl_product')->num_rows();
+			$data['user'] = $this->db->get_where('tbl_admin')->num_rows();
+
 			$this->load->view('template_admin/header');
-			$this->load->view('admin/index');
+			$this->load->view('admin/index', $data);
 			$this->load->view('template_admin/footer');
 
 		}
