@@ -112,13 +112,23 @@
 
 			$this->db->where('id', $id);
 			$this->db->update('tbl_utama', $data);
-			$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
 		 	redirect('admin/utama');
 
 
 		   }
 
 		}
+	}
+
+
+	function hapus_utama(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_utama');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dihapus", "success" );');
+		 	redirect('admin/utama');
 	}
 
 
@@ -340,7 +350,7 @@
 
 			$this->db->where('id', $id);
 			$this->db->update('tbl_section2', $data);
-			$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
 		 	redirect('admin/section2');
 
 
@@ -351,6 +361,15 @@
 			
 			
 
+	}
+
+	function hapus_section2(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_section2');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dihapus", "success" );');
+		 	redirect('admin/section2');
 	}
 
 
@@ -433,13 +452,22 @@
 
 			$this->db->where('id', $id);
 			$this->db->update('tbl_section3', $data);
-			$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
 		 	redirect('admin/section3');
 
 
 		   }
 
 		}
+	}
+
+	function hapus_section3(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_section3');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dihapus", "success" );');
+		 	redirect('admin/section3');
 	}
 
 
@@ -540,6 +568,15 @@
 
 	}
 
+	function hapus_section4(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_section4');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dihapus", "success" );');
+		 	redirect('admin/section4');
+	}
+
 
 
 function admin(){
@@ -572,6 +609,16 @@ function admin(){
 
 
 }
+
+
+function hapus_admin(){
+
+		$id = $this->input->post('id');
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_admin');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil dihapus", "success" );');
+		 	redirect('admin/admin');
+	}
 
 
 

@@ -110,6 +110,9 @@
 
                               <a href="<?= base_url('admin/edit_product?id=') ?><?= $data['id'] ?>" class= "btn btn-primary btn-sm">Edit</a>
 
+
+                              
+
                               <!-- Modal -->
                               <div class="modal fade" id="exampleModalCenter<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">

@@ -109,6 +109,45 @@
                             </button>
 
 
+
+                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalhapus<?= $data['id'] ?>"> Hapus
+                          </button>
+                        </td>
+
+
+                        <!-- Modal hapus -->
+
+                         <div class="modal fade" id="exampleModalhapus<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Pesan</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+
+                                      <form method="post" action="<?= base_url('admin/hapus_section3') ?>" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" class="form-control" value="<?= $data['id'] ?>">
+                                        
+                                        <h6><strong>Apakah anda ingin menghapus data ini?</strong></h6>
+                                        
+                                    
+
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                   <input type="submit" class="btn btn-primary" name="edit" value="Yes">
+
+
+                                   </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
                          <!--    Modal edit -->
 
                              <div class="modal fade" id="exampleModaledit<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
