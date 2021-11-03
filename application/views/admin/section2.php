@@ -102,7 +102,7 @@
                     <tbody>
                       <?php foreach($section2 as $data) { ?>
                       <tr>
-                        <th scope="row"><?= $data['title'] ?></th>
+                        <th><?= $data['title'] ?></th>
                         <td><img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;"></td>
                         <td><?= $data['link_button'] ?></td>
                         <td><?= $data['title_button'] ?></td>

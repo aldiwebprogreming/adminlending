@@ -108,7 +108,115 @@
                         <td><img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;"></td>
                         <td><?= $data['link_button'] ?></td>
                         <td><?= $data['title_button'] ?></td>
-                        <td><button class="btn btn-danger">Detail</button></td>
+                        <td>
+                           <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModaldetail">
+                                Detail
+                            </button>
+
+                           <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModaledit<?= $data['id'] ?>"> Edit
+                          </button>
+                        </td>
+
+                         <!--    Modal edit -->
+
+                             <div class="modal fade" id="exampleModaledit<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+
+                                      <form method="post" action="<?= base_url('admin/edit_utama') ?>" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" class="form-control" value="<?= $data['id'] ?>">
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Title</label>
+                                          <textarea  class="form-control textarea" name="title"><?= $data['title'] ?></textarea>
+                                    
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Images</label>
+                                          <input type="file" class="form-control" name="images">
+                                          <img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;">
+                                        </div>
+
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Link Button</label>
+                                          <input type="text" class="form-control" name="link_button"  placeholder="link button" value="<?= $data['link_button'] ?>">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Color Button</label>
+                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?p= $data['color'] ?>">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Title Button</label>
+                                          <input type="text" class="form-control" name="title_button"  placeholder="title button" value="<?= $data['title_button'] ?>">
+                                        </div>
+                                        
+                                    
+
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                   <input type="submit" class="btn btn-primary" name="edit" value="Edit">
+
+
+                                   </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                        <!-- Modal -->
+                              <div class="modal fade" id="exampleModaldetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Detail</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                      <label>Title</label>
+                                      <p><?= $data['title'] ?></p>
+                                      <hr>
+
+                                      <label>Images</label>
+                                      <p><?= $data['images'] ?></p>
+                                      <hr>
+
+                                     <label>Title Button</label>
+                                      <p><?= $data['title_button'] ?></p>
+                                      <hr>
+
+
+                                     <label>Link Button</label>
+                                      <p><?= $data['link_button'] ?></p>
+                                      <hr>
+
+                                      <label>Color Button</label>
+                                      <p><input type="color" class="form-control" value="<?= $data['color'] ?>" disabled=""></p>
+                                      <hr>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                         
                       </tr>
                     <?php } ?>

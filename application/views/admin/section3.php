@@ -104,7 +104,53 @@
                         <th scope="row"><?= $data['title'] ?></th>
                         <td><img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;"></td>
                         
-                        <td><button class="btn btn-danger">Detail</button></td>
+                        <td>
+                              <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModaledit<?= $data['id'] ?>"> Edit
+                            </button>
+
+
+                         <!--    Modal edit -->
+
+                             <div class="modal fade" id="exampleModaledit<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Edit</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                  </div>
+                                  <div class="modal-body">
+
+                                      <form method="post" action="<?= base_url('admin/edit_section3') ?>" enctype="multipart/form-data">
+                                        <input type="hidden" name="id" class="form-control" value="<?= $data['id'] ?>">
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail1">Title</label>
+                                          <textarea  class="form-control textarea" name="title"><?= $data['title'] ?></textarea>
+                                    
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputPassword1">Images</label>
+                                          <input type="file" class="form-control" name="images">
+                                          <img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;">
+                                        </div>
+
+                                        
+                                    
+
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                   <input type="submit" class="btn btn-primary" name="edit" value="Edit">
+
+
+                                   </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                        </td>
                         
                       </tr>
                     <?php } ?>
