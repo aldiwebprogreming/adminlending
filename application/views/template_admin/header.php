@@ -133,19 +133,19 @@
            <li class="nav-item">
                 <a href="<?= base_url('admin/section2') ?>" class="nav-link">
                   <i class="fas fa-pen-square nav-icon"></i>
-                  <p>Halaman Secton 2</p>
+                  <p>Halaman Section 2</p>
                 </a>
            </li>
             <li class="nav-item">
                 <a href="<?= base_url('admin/section3') ?>" class="nav-link">
                   <i class="fas fa-pen-square nav-icon"></i>
-                  <p>Halaman Secton 3</p>
+                  <p>Halaman Section 3</p>
                 </a>
            </li>
             <li class="nav-item">
                 <a href="<?= base_url('admin/section4') ?>" class="nav-link">
                   <i class="fas fa-pen-square nav-icon"></i>
-                  <p>Halaman Secton 4</p>
+                  <p>Halaman Section 4</p>
                 </a>
            </li>
 

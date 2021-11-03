@@ -29,7 +29,9 @@
 
 		function utama(){
 
-			$data['utama'] = $this->db->get('tbl_utama')->result_array();
+			$kode_user = $this->session->kode_user;
+
+			$data['utama'] = $this->db->get_where('tbl_utama',['kode_user' => $kode_user])->result_array();
 
 			$this->load->view('template_admin/header');
 			$this->load->view('admin/utama', $data);
@@ -134,7 +136,9 @@
 
 	function produk(){
 
-			$data['produk'] = $this->db->get('tbl_product')->result_array();
+			$kode_user = $this->session->kode_user;
+
+			$data['produk'] = $this->db->get_where('tbl_product', ['kode_user' => $kode_user])->result_array();
 
 		    $this->load->view('template_admin/header');
 			$this->load->view('admin/produk', $data);
@@ -259,7 +263,9 @@
 
 	function section2(){
 
-		$data['section2'] = $this->db->get('tbl_section2')->result_array();
+		$kode_user = $this->session->kode_user;
+
+		$data['section2'] = $this->db->get_where('tbl_section2',['kode_user' => $kode_user])->result_array();
 
 		$this->load->view('template_admin/header');
 		$this->load->view('admin/section2', $data);
@@ -375,7 +381,8 @@
 
 	function section3 (){
 
-		$data['section3'] = $this->db->get('tbl_section3')->result_array();
+		$kode_user = $this->session->kode_user;
+		$data['section3'] = $this->db->get_where('tbl_section3',['kode_user' => $kode_user])->result_array();
 
 		$this->load->view('template_admin/header');
 		$this->load->view('admin/section3', $data);
@@ -472,8 +479,8 @@
 
 
 	function section4(){
-
-		$data['section4'] = $this->db->get('tbl_section4')->result_array();
+		$kode_user = $this->session->kode_user;
+		$data['section4'] = $this->db->get_where('tbl_section4',['kode_user' => $kode_user])->result_array();
 		$this->load->view('template_admin/header');
 		$this->load->view('admin/section4', $data);
 		$this->load->view('template_admin/footer');
