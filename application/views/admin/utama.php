@@ -170,8 +170,7 @@
                                         <input type="hidden" name="id" class="form-control" value="<?= $data['id'] ?>">
                                         <div class="form-group">
                                           <label for="exampleInputEmail1">Title</label>
-                                          <textarea  class="form-control textarea" name="title"><?= $data['title'] ?></textarea>
-                                    
+                                          <textarea name="title"  class="form-control textarea"><?= $data['title'] ?></textarea>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleInputPassword1">Images</label>
