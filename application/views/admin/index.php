@@ -88,19 +88,18 @@
           </section>
           <!-- /.Left col -->
           <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <?php   
+
+                $url = base_url();
+
+           ?>
           <section class="col-lg-5 connectedSortable">
-
-            <!-- Map card -->
-           
-            <!-- /.card -->
-
-            <!-- solid sales graph -->
-           
-            <!-- /.card -->
-
-            <!-- Calendar -->
-            
-            <!-- /.card -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                   <span class="input-group-text" id="basic-addon1">Link</span>
+                  </div>
+                     <input type="text" class="form-control" placeholder="link" value="<?= $url ?>lending/<?= $this->session->kode_user ?>">
+                </div>
           </section>
           <!-- right col -->
         </div>
