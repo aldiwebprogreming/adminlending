@@ -95,7 +95,9 @@
 
            ?>
           <section class="col-lg-5 connectedSortable">
+             <small style=""><i>Copy link dibawah ini untuk mengarahkan lending page anda.</i></small>
                 <div class="input-group mb-3">
+
                   <div class="input-group-prepend">
                    <span class="input-group-text" id="basic-addon1">Link</span>
                   </div>

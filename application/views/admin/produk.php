@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Halaman Produk Best Seller</h1><hr>
+            <h1 class="m-0 text-dark"><i class="fas fa-shopping-cart"></i> Halaman Produk Best Seller</h1><hr>
 
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">

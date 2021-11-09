@@ -112,22 +112,21 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
         </li>
       </ul>
     </nav>
-    <div class="hero__content container mx-auto" id="home">
+    <div class="hero__content container mx-auto">
       <div class="row px-0 mx-0 align-items-center">
         <div class="col-lg-6 px-0" style="">
-          <div class="" style="background-color: red; width: 115px;">
+          <div class="" style="">
           <!-- <h6 class="ml-2" style="color: white;"><strong>BEST PRICE : </strong></h6> -->
           </div>
           
-            <?= $utama['title'] ?>
-        
+           <h1>Lorem ipsum dolor sit amet, consectetur adipisicm.</h1>
           <p class="hero__paragraph mb-5">
            <!--  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's
             standard -->
           </p>
           <div class="hero__btns-container">
-            <a href="<?= $utama['link_button'] ?>" target="_blank" class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#">
+            <a href="<?= $utama['link_button'] ?>" target="_blank" class="hero__btn btn btn-primary mb-2 mb-lg-0" href="#" style="background-color: <?= $utama['color'] ?>">
                 <?= $utama['title_button'] ?>
             </a>
            <!--  <a class="hero__btn btn btn-secondary mx-lg-3" href="#">
@@ -243,7 +242,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
               <div class="card" style="">
                 <div class="text ml-3" style="position: absolute;" id="card2">
                     <?= $sc2['title'] ?>
-                    <a href="<?= $sc2['link_button'] ?>" target="_blank" class="btn btn-primary" style="background-color: white; color:black;"><?= $sc2['title_button'] ?></a>
+                    <a href="<?= $sc2['link_button'] ?>" target="_blank" class="btn btn-primary" style="background-color: <?= $sc2['color'] ?>; color:black;"><?= $sc2['title_button'] ?></a>
                 </div>
                 <img class="card-img-top" src="<?= base_url('lending_assets/') ?>assets/produk/<?= $sc2['images'] ?>" alt="Card image cap">
                 
@@ -654,7 +653,7 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
     <?= $section4['title'] ?>
     <p style="font-size: 4vw"><strong> Special Offers </strong></h1>
     <p style="font-size: 2vw"></p>
-     <a href="<?= $section4['link_button'] ?>" target="_blank" class="btn btn-danger  mb-5" id="btn-gbr"><i class="fas fa-shopping-bag"></i> Shop</a>
+     <a href="<?= $section4['link_button'] ?>" target="_blank" class="btn btn-danger  mb-5" id="btn-gbr" style="background-color: orange;"><i class="fas fa-shopping-bag"></i> <?= $section4['title_button'] ?></a>
     </div>
   </div>
 </div>

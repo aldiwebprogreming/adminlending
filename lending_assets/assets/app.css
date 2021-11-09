@@ -201,7 +201,7 @@ button:focus {
 
 .hero-nav__link:hover,
 .hero-nav__link:focus {
-  color: var(--primary);
+ 
   text-decoration: none;
   opacity: 1;
 }
