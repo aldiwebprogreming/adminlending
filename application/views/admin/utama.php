@@ -186,7 +186,7 @@
 
                                         <div class="form-group">
                                           <label for="exampleInputPassword1">Color Button</label>
-                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?p= $data['color'] ?>">
+                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?= $data['color'] ?>">
                                         </div>
 
 

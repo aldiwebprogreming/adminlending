@@ -17,8 +17,9 @@
 
 		function index(){
 
-			$data['produk'] = $this->db->get('tbl_product')->num_rows();
+			$data['produk'] = $this->db->get_where('tbl_product',['kode_user' => $this->session->kode_user])->num_rows();
 			$data['user'] = $this->db->get_where('tbl_admin')->num_rows();
+			$data['produk_salle'] = $this->db->get_where('tbl_product_salle',['kode_user' => $this->session->kode_user])->num_rows();
 
 			$this->load->view('template_admin/header');
 			$this->load->view('admin/index', $data);
@@ -86,8 +87,9 @@
 		$id = $this->input->post('id');
 		$edit = $this->input->post('edit');
 		$file = $this->input->post('images');
+		$images = $_FILES['images']['name'];
 
-		if ($edit) {
+		if ($images == true) {
 
 			$config['upload_path']          = './upload/';
 			$config['allowed_types']        = 'jpg|png|jpeg';
@@ -119,6 +121,21 @@
 
 
 		   }
+
+		}else{
+
+			$data = [
+
+				'title' => $this->input->post('title'),
+				'link_button' => $this->input->post('link_button'),
+				'color' => $this->input->post('color'),
+				'title_button' => $this->input->post('title_button'),
+			];
+
+			$this->db->where('id', $id);
+			$this->db->update('tbl_utama', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
+		 	redirect('admin/utama');
 
 		}
 	}
@@ -168,6 +185,7 @@
 					'harga_awal' => $this->input->post('harga_awal'),
 					'harga_diskon' => $this->input->post('harga_diskon'),
 					'images' => $images = $_FILES['images']['name'],
+					'link_button' => $this->input->post('link_button'),
 
 				];
 
@@ -209,8 +227,9 @@
 	function act_edit(){
 
 		$id = $this->input->post('id');
+		$images = $_FILES['images']['name'];
 
-		if ($this->input->post('images') == null) {
+		if ($images == true) {
 			
 
 			$config['upload_path']          = './upload/';
@@ -235,6 +254,7 @@
 					'harga_awal' => $this->input->post('harga_awal'),
 					'harga_diskon' => $this->input->post('harga_diskon'),
 					'images' => $images = $_FILES['images']['name'],
+					'link_button' => $this->input->post('link_button'),
 				];
 
 				$this->db->where('id',$id);
@@ -248,18 +268,148 @@
 
 		$data = [
 			'title_product' => $this->input->post('title_product'),
-			'images' => $this->input->post('images'),
 			'harga_awal' => $this->input->post('harga_awal'),
 			'harga_diskon' => $this->input->post('harga_diskon'),
 		];
 
 			$this->db->where('id',$id);
 			$this->db->update('tbl_product', $data);
-			$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil diedit", "success");');
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil diedit2", "success");');
 			redirect('admin/produk');
 		}
 
 	}
+
+
+	function produk_salle(){
+
+			$kode_user = $this->session->kode_user;
+
+			$data['produk_salle'] = $this->db->get_where('tbl_product_salle', ['kode_user' => $kode_user])->result_array();
+
+		    $this->load->view('template_admin/header');
+			$this->load->view('admin/produk_salle', $data);
+			$this->load->view('template_admin/footer');
+
+			$kirim = $this->input->post('kirim');
+
+		if ($kirim) {
+
+			$config['upload_path']          = './upload/';
+			$config['allowed_types']        = 'jpg|png|jpeg';
+			
+
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('images')){
+				$error = array('error' => $this->upload->display_errors());
+				$this->session->set_flashdata('message', 'swal("Gagal!", "Upload gambar gagal", "warning" );');
+		 		redirect('admin/produk_salle');
+
+		 	}else{
+
+
+				$kode_user = $this->session->kode_user;
+				$data = [
+					'kode_user' => $kode_user,
+					'title_product' => $this->input->post('title_product'),
+					'harga_awal' => $this->input->post('harga_awal'),
+					'harga_diskon' => $this->input->post('harga_diskon'),
+					'images' => $images = $_FILES['images']['name'],
+					'link_button' => $this->input->post('link_button'),
+
+				];
+
+				$this->db->insert('tbl_product_salle', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil dipost", "success");');
+				redirect('admin/produk_salle');
+
+
+			}
+		}
+	}
+
+
+	function edit_product_salle(){
+
+			$id = $this->input->get('id');
+			$data['produk'] = $this->db->get_where('tbl_product_salle',['id' => $id])->row_array();
+
+			$this->load->view('template_admin/header');
+			$this->load->view('admin/edit_produk_salle', $data);
+			$this->load->view('template_admin/footer');
+
+	}
+
+	function act_edit2(){
+
+		$id = $this->input->post('id');
+		$images = $_FILES['images']['name'];
+
+		if ($images == true) {
+			
+
+			$config['upload_path']          = './upload/';
+			$config['allowed_types']        = 'jpg|png|jpeg';
+			
+
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('images')){
+				$error = array('error' => $this->upload->display_errors());
+				$this->session->set_flashdata('message', 'swal("Gagal!", "Upload gambar gagal", "warning" );');
+		 		redirect('admin/produk_salle');
+
+		 	}else{
+
+
+
+				$kode_user = $this->session->kode_user;
+				
+				$data = [
+					'kode_user' => $kode_user,
+					'title_product' => $this->input->post('title_product'),
+					'harga_awal' => $this->input->post('harga_awal'),
+					'harga_diskon' => $this->input->post('harga_diskon'),
+					'images' => $images = $_FILES['images']['name'],
+					'link_button' => $this->input->post('link_button'),
+				];
+
+				$this->db->where('id',$id);
+				$this->db->update('tbl_product_salle', $data);
+				$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil diedit", "success");');
+				redirect('admin/produk_salle');
+
+			}
+
+		}else{
+
+		$data = [
+					'title_product' => $this->input->post('title_product'),
+					'harga_awal' => $this->input->post('harga_awal'),
+					'harga_diskon' => $this->input->post('harga_diskon'),
+					'link_button' => $this->input->post('link_button'),
+		];
+
+			$this->db->where('id',$id);
+			$this->db->update('tbl_product_salle', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil diedit", "success");');
+			redirect('admin/produk_salle');
+		}
+
+	}
+
+	function hapus_produk_salle(){
+
+		$id =  $this->input->post('id');
+
+		$this->db->where('id', $id);
+		$this->db->delete('tbl_product_salle');
+		$this->session->set_flashdata('message', 'swal("Sukses!", "Datar berhasil dihapus", "success");');
+		redirect('admin/produk_salle');
+
+	}
+
+
+	
 
 	function section2(){
 
@@ -328,8 +478,9 @@
 		$id = $this->input->post('id');
 		$edit = $this->input->post('edit');
 		$file = $this->input->post('images');
+		$images = $_FILES['images']['name'];
 
-		if ($edit) {
+		if ($images == true) {
 
 			$config['upload_path']          = './upload/';
 			$config['allowed_types']        = 'jpg|png|jpeg';
@@ -362,6 +513,20 @@
 
 		   }
 
+		}else{
+
+			$data = [
+
+				'title' => $this->input->post('title'),
+				'link_button' => $this->input->post('link_button'),
+				'color' => $this->input->post('color'),
+				'title_button' => $this->input->post('title_button'),
+			];
+
+			$this->db->where('id', $id);
+			$this->db->update('tbl_section2', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
+		 	redirect('admin/section2');
 		}
 
 			
@@ -433,8 +598,9 @@
 		$id = $this->input->post('id');
 		$edit = $this->input->post('edit');
 		$file = $this->input->post('images');
+		$images = $_FILES['images']['name'];
 
-		if ($edit) {
+		if ($images == true) {
 
 			$config['upload_path']          = './upload/';
 			$config['allowed_types']        = 'jpg|png|jpeg';
@@ -464,6 +630,19 @@
 
 
 		   }
+
+		}else{
+
+			$data = [
+
+				'title' => $this->input->post('title'),
+				
+			];
+
+			$this->db->where('id', $id);
+			$this->db->update('tbl_section3', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Data berhasil diedit", "success" );');
+		 	redirect('admin/section3');
 
 		}
 	}
@@ -537,8 +716,9 @@
 		$id = $this->input->post('id');
 		$edit = $this->input->post('edit');
 		$file = $this->input->post('images');
+		$images = $_FILES['images']['name'];
 
-		if ($edit) {
+		if ($images == true) {
 
 			$config['upload_path']          = './upload/';
 			$config['allowed_types']        = 'jpg|png|jpeg';
@@ -571,6 +751,20 @@
 
 		   }
 
+		}else{
+
+			$data = [
+
+				'title' => $this->input->post('title'),
+				'link_button' => $this->input->post('link_button'),
+				'color' => $this->input->post('color'),
+				'title_button' => $this->input->post('title_button'),
+			];
+
+			$this->db->where('id', $id);
+			$this->db->update('tbl_section4', $data);
+			$this->session->set_flashdata('message', 'swal("Sukses!", "Edit data berhasil diedit", "success" );');
+		 	redirect('admin/section4');
 		}
 
 	}
@@ -587,6 +781,10 @@
 
 
 function admin(){
+
+		if ($this->session->rule == 'Admin') {
+			redirect('admin/index');
+		}else{
 
 		$data['admin'] = $this->db->get('tbl_admin')->result_array();
 		$this->load->view('template_admin/header');
@@ -613,6 +811,8 @@ function admin(){
 		redirect('admin/admin');
 
 	}
+
+}
 
 
 }

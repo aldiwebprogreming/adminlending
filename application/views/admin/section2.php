@@ -102,7 +102,7 @@
                     <tbody>
                       <?php foreach($section2 as $data) { ?>
                       <tr>
-                        <th><?= $data['title'] ?></th>
+                        <td><?= $data['title'] ?></td>
                         <td><img src="<?= base_url('upload/') ?><?= $data['images'] ?>" style="height: 100px;"></td>
                         <td><?= $data['link_button'] ?></td>
                         <td><?= $data['title_button'] ?></td>
@@ -188,7 +188,7 @@
 
                                         <div class="form-group">
                                           <label for="exampleInputPassword1">Color Button</label>
-                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?p= $data['color'] ?>">
+                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?= $data['color'] ?>">
                                         </div>
 
 

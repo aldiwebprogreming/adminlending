@@ -127,7 +127,14 @@
             <li class="nav-item">
                 <a href="<?= base_url('admin/produk') ?>" class="nav-link">
                   <i class="fas fa-cart-arrow-down nav-icon"></i>
-                  <p>Produk</p>
+                  <p>Produk Best Seller</p>
+                </a>
+           </li>
+
+             <li class="nav-item">
+                <a href="<?= base_url('admin/produk_salle') ?>" class="nav-link">
+                  <i class="fas fa-cart-arrow-down nav-icon"></i>
+                  <p>Produk ON Salle</p>
                 </a>
            </li>
            <li class="nav-item">

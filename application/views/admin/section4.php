@@ -108,15 +108,15 @@
                         <td><?= $data['link_button'] ?></td>
                         <td><?= $data['title_button'] ?></td>
                         <td>
-                             <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModaldetail">
+                             <button type="button" class="btn btn-primary btn-sm mt-1 mb-1" data-toggle="modal" data-target="#exampleModaldetail">
                               Detail
                             </button>
 
-                             <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModaledit<?= $data['id'] ?>"> Edit
+                             <button type="button" class="btn btn-success btn-sm mt-1 mb-1" data-toggle="modal" data-target="#exampleModaledit<?= $data['id'] ?>"> Edit
                             </button>
 
 
-                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalhapus<?= $data['id'] ?>"> Hapus
+                             <button type="button" class="btn btn-danger btn-sm mt-1 mb-1" data-toggle="modal" data-target="#exampleModalhapus<?= $data['id'] ?>"> Hapus
                           </button>
 
                            <div class="modal fade" id="exampleModalhapus<?= $data['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -184,7 +184,7 @@
 
                                         <div class="form-group">
                                           <label for="exampleInputPassword1">Color Button</label>
-                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?p= $data['color'] ?>">
+                                          <input type="color" class="form-control" name="color"  placeholder="link button" value="<?= $data['color'] ?>">
                                         </div>
 
 

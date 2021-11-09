@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Edit Produk Best Seller</h1><hr>
+            <h1 class="m-0 text-dark">Edit Produk ON Salle</h1><hr>
 
               <!-- Button trigger modal -->
             <!--   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -38,11 +38,11 @@
 
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Halaman Edit Produk Best Sellers</h3>
+                <h3 class="card-title">Halaman Edit Produk ON Salle</h3>
               </div>
               <div class="card-body">
 
-                <form method="post" action="<?= base_url('admin/act_edit') ?>" enctype="multipart/form-data">
+                <form method="post" action="<?= base_url('admin/act_edit2') ?>" enctype="multipart/form-data">
                   <input type="hidden" name="id" value="<?= $produk['id'] ?>">
                    <div class="form-group">
                       <label for="exampleInputEmail1">Title Product</label>

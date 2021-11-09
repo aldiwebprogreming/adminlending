@@ -31,12 +31,27 @@
               <div class="inner">
                 <h3><?= $produk ?></h3>
 
-                <p>Data Produk</p>
+                <p>Data Produk Best Seller</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
               <a href="<?= base_url('admin/produk') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3><?= $produk_salle ?></h3>
+
+                <p>Data Produk ON Salle</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="<?= base_url('admin/produk_salle') ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -57,21 +72,7 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-
+         
 
           <!-- ./col -->
         </div>
@@ -98,7 +99,7 @@
                   <div class="input-group-prepend">
                    <span class="input-group-text" id="basic-addon1">Link</span>
                   </div>
-                     <input type="text" class="form-control" placeholder="link" value="<?= $url ?>lending/<?= $this->session->kode_user ?>">
+                     <input type="text" class="form-control" placeholder="link" value="<?= $url ?>page/<?= $this->session->kode_user ?>">
                 </div>
           </section>
           <!-- right col -->

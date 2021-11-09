@@ -61,6 +61,7 @@
 
 
 				$this->session->unset_userdata('username');
+				$this->session->unset_userdata('rule');
 				$this->session->set_flashdata('message', 'swal("Sukses!", "Anda Berhasil Keluar", "success");');
 					redirect('login/');
 		}

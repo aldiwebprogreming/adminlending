@@ -6,7 +6,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Halaman Produk Best Seller</h1><hr>
+            <h1 class="m-0 text-dark">Halaman Produk ON Salle</h1><hr>
 
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -38,7 +38,7 @@
                           <div class="form-group">
                             <label for="exampleInputPassword1">Harga Awal</label>
                             <input type="number" class="form-control" name="harga_awal"  placeholder="Harga awal">
-                            <small>Masukan harga awal tanpa karekter Rupiah, koma dan titik.</small>
+                             <small>Masukan harga awal tanpa karekter Rupiah, koma dan titik.</small>
                           </div>
 
 
@@ -87,7 +87,7 @@
 
           <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Halaman Produk Best Seller</h3>
+                <h3 class="card-title">Data Halaman Produk ON Salle</h3>
               </div>
               <div class="card-body">
                   <table class="table table-striped">
@@ -102,7 +102,7 @@
                     </thead>
                     <tbody>
                       
-                      <?php foreach($produk as $data){ ?>
+                      <?php foreach($produk_salle as $data){ ?>
 
                         <tr>
                           <td><?= $data['title_product'] ?></td>
@@ -115,7 +115,7 @@
                                 Hapus
                               </button>
 
-                              <a href="<?= base_url('admin/edit_product?id=') ?><?= $data['id'] ?>" class= "btn btn-primary btn-sm">Edit</a>
+                              <a href="<?= base_url('admin/edit_product_salle?id=') ?><?= $data['id'] ?>" class= "btn btn-primary btn-sm">Edit</a>
 
 
                               
@@ -134,7 +134,7 @@
                                       <strong style="text-align: center;"> Apakah anda ingin menghapus data ini?
                                     </div>
                                     <div class="modal-footer">
-                                      <form method="post" action="<?= base_url('admin/hapus_produk') ?>">
+                                      <form method="post" action="<?= base_url('admin/hapus_produk_salle') ?>">
                                         
                                         <input type="hidden" name="id" value="<?= $data['id'] ?>"  class="form-control">
                                     
