@@ -645,19 +645,19 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
 
   <!-- =================================== -->
 
-<div class="card bg-dark text-white mb-5" id="hero">
+<!-- <div class="card bg-dark text-white mb-5" id="hero">
   <img class="card-img" src="<?= base_url('lending_assets/') ?>assets/produk/bener-bawah3.png" alt="Card image">
   <div class="card-img-overlay float-sm-right" id="bg-al" style="background-color: rgba(0, 0, 0, 0.5);">
-    <div  id="card3">
+    <div  id="card3"> -->
      <!--  <div class="bulat rounded-circle" style="height: 200px; width: 200px; background-color: white; border-radius: 100px; position: absolute; margin-left: 500px;"><h1 style="margin-top: 30px; text-align:center; color: red; font-size: 60px;"><strong>Disc<br>10 %</strong></h1></div> -->
-    <?= $section4['title'] ?>
+    <!-- <?= $section4['title'] ?>
     <p style="font-size: 4vw"><strong> Special Offers </strong></h1>
     <p style="font-size: 2vw"></p>
      <a href="<?= $section4['link_button'] ?>" target="_blank" class="btn btn-danger  mb-5" id="btn-gbr" style="background-color: orange;"><i class="fas fa-shopping-bag"></i> <?= $section4['title_button'] ?></a>
     </div>
   </div>
 </div>
-
+ -->
 
 
 
@@ -709,16 +709,16 @@ src="https://www.facebook.com/tr?id=215446792369040&ev=PageView&noscript=1"
           <div class="col-sm-6">
             <p><strong>Jakarta Office</strong></p>
             <label>Jl. Daan Mogot KM. 18 Green Sedayu Bizpark DM 5 No. 2 Jakarta Barat 11840 - Indonesia.</label><br>
-            <label>Telp. (021) 22522441.</label><br>
-            <label>Fax. (021) 22522442.</label>
+           <!--  <label>Telp. (021) 22522441.</label><br>
+            <label>Fax. (021) 22522442.</label> -->
               
           </div>
 
           <div class="col-sm-6">
             <p><strong>MEDAN OFFICE & WAREHOUSE</strong></p>
             <label>Jln Sangir Talaud I KIM IV Desa Pematang Johar, Labuhan Deli Sumatera Utara 20373 - Indonesia.</label><br>
-            <label>Telp. (061) 7862299.</label><br>
-            <label>Fax. (061) 7874188.</label>
+          <!--   <label>Telp. (061) 7862299.</label><br>
+            <label>Fax. (061) 7874188.</label> -->
               
           </div>
 

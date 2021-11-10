@@ -103,6 +103,8 @@
                   </div>
                      <input type="text" class="form-control" placeholder="link" value="<?= $url ?>page/<?= $this->session->kode_user ?>">
                 </div>
+
+                <a href="<?= $url ?>page/<?= $this->session->kode_user ?>" target="_blank" class="btn btn-primary"> Review Landing Paga <i class="fas fa-globe"></i> </a>
           </section>
           <!-- right col -->
         </div>
