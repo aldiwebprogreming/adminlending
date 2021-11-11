@@ -50,7 +50,10 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Images</label>
-                      <input type="file" class="form-control" name="images">
+                     <!--  <input type="file" class="form-control" name="images"> -->
+                       <input type="file" class="form-control" name="images" id="preview_gambar">
+
+                            <img src="<?= base_url('upload/') ?><?= $produk['images'] ?>" id="gambar_nodin" width="200" alt="Preview Gambar" class="mt-2" />
                     </div>
 
                   <div class="form-group">
