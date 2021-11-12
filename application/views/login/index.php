@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Admin</b> Lending BJMS</a>
+    <a href="#"><b>Admin</b> <i class="fas fa-user-shield"></i></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
